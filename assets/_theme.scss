@@ -1,0 +1,11 @@
+$bg-body : #fafafa;
+$font-color: #042f2e;
+$theme : #0f766e;
+
+@mixin grid ($left, $right){
+  display: grid;
+  grid-template-columns: $left $right;
+  align-items: center;
+  justify-content: center;
+}
+

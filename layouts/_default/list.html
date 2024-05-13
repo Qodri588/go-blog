@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="list-list">
+  <h1 class="list-page">{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range (.Paginator 5).Pages }}
+  <article class="list-article">
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    
+    <div class="info">
+        {{ partial "info-page" . }}
+    </div>
+    
+    {{ if gt (len .Summary) 150 }}
+      {{ slicestr .Summary 0 150 }}...
+    {{ else }}
+      {{ .Summary }}...
+    {{ end }}
+  </article>
+  {{ end }}
+  </div>
+  <div class="paginator">
+  {{ template "_internal/pagination.html" . }}
+  </div>
+{{ end }}

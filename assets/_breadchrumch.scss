@@ -1,0 +1,27 @@
+.bread{
+  padding: 0.5em 0;
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    display: flex;
+    gap: 0.5em;
+    li{
+      margin: 0;
+      padding: 0;
+      color: $theme;
+      &:not(:last-child)::after {
+  content: "/"
+  ;
+      }
+      a{
+        padding-left: 0;
+        padding-right: 0.7em;
+        padding-top: 0.3em;
+        padding-bottom: 0.5em;
+        font-size: 14px;
+      }
+    }
+  }
+}

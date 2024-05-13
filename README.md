@@ -1,1 +1,7 @@
-# go-blog
+# Theme Name
+
+## Features
+
+## Installation
+
+## Configuration

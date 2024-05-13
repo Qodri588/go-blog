@@ -1,0 +1,41 @@
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+<div class="right">
+<h3>Latest Post</h3>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div class="info-latest-post">
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      </time>
+      <div class="divider">│</div>
+      <div class="info-latest-post-author">{{ .Params.author }}</div>
+      </div>
+    </li>
+  {{ end }}
+</ul>
+</div>
+
+
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<div class="right" style="display:none">
+  <h3>Related Post</h3>
+  {{ range . }}
+  <div class="container-related">
+    <div class="img">
+      <img src="{{ .Params.image }}">
+    </div>
+    <div class="container-related-detail">
+      <div class="title-related">
+      {{ .Title }}
+      </div>
+      <div class="author-related">
+        {{ .Params.author }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

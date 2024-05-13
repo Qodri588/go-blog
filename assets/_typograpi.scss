@@ -1,0 +1,102 @@
+$base-font-family: 'Helvetica Neue', Helvetica, sans-serif;
+$base-font-size: 14px;
+$h-line-height: 1.4;
+$h-font-weight: 600;
+//$h-padding: 1em 0 0.5em;
+$h-padding: null;
+
+@mixin heading-style($size) {
+  font-size: $base-font-size + $size;
+  line-height: $h-line-height;
+  font-weight: $h-font-weight;
+  padding: $h-padding;
+  text-transform: capitalize;
+  font-family: Times New Roman;
+}
+
+body {
+  font: normal 400 16px / 1.6 $base-font-family;
+  color: $font-color;
+  background-color: $bg-body;
+}
+h2,h3,h4{margin-bottom: 1em;}
+h1 {
+  @include heading-style(5px);
+}
+
+h2 {
+  @include heading-style(4px);
+}
+
+h3 {
+  @include heading-style(3px);
+}
+
+h4 {
+  @include heading-style(3px);
+}
+
+p {
+  padding: 1em 0 1em;
+}
+
+.single ol, .single ul{
+  list-style-type: "⍟ ";
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.single li{
+  margin-bottom: 0.4em;
+}
+
+a {
+  
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  color: #f00;
+  text-decoration: underline;
+}
+
+a:hover::before {
+  background-color: #f00;
+}
+
+$samp-value: #f0f0f0;
+$time-value: #333;
+$code-value: #000;
+$variable-value: #008000;
+$background-value: #fff;
+$border-value: #ccc;
+$text-main-value: #333;
+
+time {
+  background: $background-value;
+  color: $code-value;
+  padding: 2.5px 5px;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+pre > code {
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+var {
+  color: $variable-value;
+  font-style: normal;
+  font-family: monospace;
+}
+
+kbd {
+  background: $background-value;
+  border: 1px solid $border-value;
+  border-radius: 20px;
+  color: $text-main-value;
+  padding: 2px 4px;
+}

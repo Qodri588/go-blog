@@ -1,0 +1,19 @@
+.list-page{
+  margin-top:1.5em;
+}
+.list-article{
+  padding: 1.5em 0;
+  border-bottom: 2px grey solid;
+  &:last-child{
+    border: none;
+    padding-bottom: 0;
+    
+  }
+  h2{
+    margin-bottom: 0.3em;
+  }
+}
+
+.info{
+  margin-bottom: 1em;
+}
