@@ -3,11 +3,6 @@
   overflow: hidden;
   background-color: $theme;
   font-weight: 500;
-  -webkit-transition: color 0.5s linear;
--moz-transition: color 0.5s linear;
--ms-transition: color 0.5s linear;
--o-transition: color 0.5s linear;
-transition: color 0.5s linear;
 }
 
 .topnav a {
@@ -28,9 +23,6 @@ transition: color 0.5s linear;
   color: white;
 }
 
-.topnav .icon {
-  display: none;
-}
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}

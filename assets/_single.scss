@@ -85,7 +85,7 @@ main{
   
 
 
-.toc{
+.container-toc{
   margin-top: 1em;
   margin-bottom: 0;
   margin-right: 0;
@@ -100,11 +100,9 @@ main{
     margin: 0;
     margin-left: 1.3em;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 300;
     list-style: "›";
     font-family: Monospace;
     text-transform: capitalize;
     }
-  .toc-content{
-    display: none;}
 }
