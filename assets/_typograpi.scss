@@ -40,13 +40,22 @@ p {
   padding: 1em 0 1em;
 }
 
-.single ol, .single ul{
+ol,ul{
   list-style-type: "⍟ ";
   margin-left: 2em;
   margin-bottom: 1em;
 }
 
-.single li{
+
+ol li{
+  margin-bottom: 0.4em;
+}
+
+ul li{
+  margin-bottom: 0.4em;
+}
+
+li{
   margin-bottom: 0.4em;
 }
 
