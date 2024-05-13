@@ -1,23 +1,19 @@
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var touchToc = document.querySelector('.touch-toc');
-    var iconToc = document.querySelector('.toc-content');
-    
-    touchToc.addEventListener('click', function() {
-        if (iconToc.style.display === 'none') {
-            iconToc.style.display = 'inline';
-        } else {
-            iconToc.style.display = 'none';
-        }
-    });
+  const iconToc = document.querySelector('.icon-toc');
+const tocContent = document.querySelector('.toc-content');
+
+iconToc.addEventListener('click', () => {
+  tocContent.classList.toggle('hidden');
 });
 
-function myFunction() {
+</script>
+<script>
+document.querySelector('.icon').addEventListener('click', function() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
   }
-}
-  </script>
+});
+</script>
