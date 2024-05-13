@@ -3,26 +3,7 @@
   {{ partial "bread" . }}
   <h1>{{ .Title }}</h1>
   {{ partial "info-page" . }}
-  <aside class="toc">
-    <div class="touch-toc">
-        ▍ Table Of Content
-    </div>
-  <div class="toc-content">{{ .TableOfContents }}</div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var touchToc = document.querySelector('.touch-toc');
-    var iconToc = document.querySelector('.toc-content');
-    
-    touchToc.addEventListener('click', function() {
-        if (iconToc.style.display === 'none') {
-            iconToc.style.display = 'inline';
-        } else {
-            iconToc.style.display = 'none';
-        }
-    });
-});
-  </script>
-  </aside>
+  {{ partial "toc" . }}
   <div class="content-page">
   {{ .Content }}
   </div>

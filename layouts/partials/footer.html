@@ -1,9 +1,14 @@
 <script>
-  const iconToc = document.querySelector('.icon-toc');
-const tocContent = document.querySelector('.toc-content');
-
-iconToc.addEventListener('click', () => {
-  tocContent.classList.toggle('hidden');
+    document.addEventListener('DOMContentLoaded', function() {
+    var touchToc = document.querySelector('.touch-toc');
+    var iconToc = document.querySelector('.toc-content');
+    
+    touchToc.addEventListener('click', function() {
+        if (iconToc.style.display === 'none') {
+            iconToc.style.display = 'inline';
+        } else {
+            iconToc.style.display = 'none';
+        }
+    });
 });
-
-</script>
+  </script>
