@@ -1,6 +1,7 @@
-$bg-body : #fafafa;
+$bg-body : #F6F6F6;
 $font-color: #042f2e;
-$theme : #0f766e;
+$theme : #32012F;
+$grey-color : #524C42;
 
 @mixin grid ($left, $right){
   display: grid;
@@ -95,6 +96,9 @@ $theme : #0f766e;
 
 main{
   @include ani-fadein(1s);
+}
+img{
+  @include ani-fadein(5s);
 }
 
 .container-toc{

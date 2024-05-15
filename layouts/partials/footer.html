@@ -1,10 +1,35 @@
-<script>
-document.querySelector('.icon').addEventListener('click', function() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-});
-</script>
+<footer class="footer" id="footer-menu">
+  <div class="footer-page">
+  <div class="footer-menu">
+    <h4>Site Menu</h4>
+    <ul>
+      <li><a href="#">TOS</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Privacy Police</a></li>
+    </ul>
+  </div>
+  <div class="footer-social">
+    <div class="social">
+      <h4>Social Menu</h4>
+      <div id="social">
+        {{ partial "svg/facebook" . }}
+        {{ partial "svg/twitter" . }}
+        {{ partial "svg/pinterest" . }}
+      </div>
+    </div>
+    <div class="social">
+      <h4>Contact</h4>
+      <div id="social">
+        {{ partial "svg/telegram" . }}
+        {{ partial "svg/whatsapp" . }}
+        {{ partial "svg/gmail" . }}
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="copyright">
+    Copyright © 2024. Go Blog Hugo
+  </div>
+</footer>
+

@@ -4,19 +4,17 @@
   padding-left: 0;
   justify-content: center;
   margin-top:2em;
-}
-
-.page-item {
-  margin-right: 5px;
+  margin-left: 0;
+  gap: 2px;
 }
 
 .page-link {
   color: $theme;
   text-decoration: none;
   padding: 5px 10px;
-  border: 2px solid $theme;
+  border: 1px solid $theme;
   border-radius: 10px;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .page-link:hover {

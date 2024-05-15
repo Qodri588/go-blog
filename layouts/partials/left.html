@@ -1,0 +1,19 @@
+  {{ $related := .Site.RegularPages.Related . | first 5 }}
+  {{ with $related }}
+<div class="right">
+  <h3>Artikel Terkait</h3>
+  <ul>
+
+    {{ range . }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div class="info-latest-post">
+        <time datetime="{{ .Date }}">{{ .Date.Format "02 Jan 2006" }}</time>
+        <div class="divider">│</div>
+        <div class="info-latest-post-author">{{ .Params.author }}</div>
+      </div>
+    </li>
+    {{ end }}
+  {{ end }}
+</ul>
+</div>

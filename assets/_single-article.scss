@@ -1,0 +1,34 @@
+#article-header{
+  h1{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.container_info{
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0.5em 0;
+  text-transform: capitalize;
+}
+.container-toc{
+  text-transform: capitalize;
+  h2{
+    font-size: 14px;
+    padding: 0.15em 0;
+    margin-bottom: 0.1em;
+    margin-top:1em;
+  }
+    ul{
+    padding: 0;
+    margin: 0;
+    margin-left: 1.3em;
+    font-size: 13px;
+    font-weight: 400;
+    list-style: "› ";
+    text-transform: capitalize;
+    li{
+      margin-bottom: 0.25em;
+    }
+    }
+}

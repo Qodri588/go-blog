@@ -1,12 +1,35 @@
 {{ define "main" }}
 <article class="single">
-  {{ partial "bread" . }}
-  <h1>{{ .Title }}</h1>
-  {{ partial "info-page" . }}
-  {{ partial "toc" . }}
-  <div class="content-page">
-  {{ .Content }}
-  </div>
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  </article>
+  <div class="bread">
+  <ul>
+    {{ range .Ancestors.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+  <header id="article-header">
+    <h1>{{ .Title }}</h1>
+    
+    <div class="container_info">
+🥷 By {{ .Params.author }} | 
+ 🕑 <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}" aria-label="Published on {{ .Date | time.Format ":date_long" }}">{{ .Date | time.Format ":date_long" }}</time>
+    </div>
+  </header>
+  
+  <nav class="container-toc" role="navigation" aria-label="Table of Contents">
+    <h2>Table of Contents</h2>
+    {{ .TableOfContents }}
+  </nav>
+  
+  <section class="content-page" id="article-page">
+    {{ .Content }}
+  </section>
+  
+  <aside id="tags-of-page" role="complementary">
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </aside>
+  
+</article>
 {{ end }}
