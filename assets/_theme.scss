@@ -1,4 +1,4 @@
-$bg-body : #F6F6F6;
+$b$bg-body : #F6F6F6;
 $font-color: #042f2e;
 $theme : #32012F;
 $grey-color : #524C42;
@@ -95,9 +95,6 @@ $grey-color : #524C42;
 
 
 main{
-  @include ani-fadein(0.5s);
-}
-img{
   @include ani-fadein(1s);
 }
 
