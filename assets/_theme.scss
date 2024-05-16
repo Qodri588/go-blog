@@ -1,6 +1,6 @@
-$b$bg-body : #F6F6F6;
+$bg-body : #F6F6F6;
 $font-color: #042f2e;
-$theme : #32012F;
+$theme : #016A70;
 $grey-color : #524C42;
 
 @mixin grid ($left, $right){
@@ -96,10 +96,4 @@ $grey-color : #524C42;
 
 main{
   @include ani-fadein(1s);
-}
-
-.container-toc{
-  @include ani-fadein(
-  5
-  );
 }
