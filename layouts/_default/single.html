@@ -1,27 +1,29 @@
 {{ define "main" }}
 <article class="single">
+  
   <div class="bread">
   <ul>
     {{ range .Ancestors.Reverse }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
       </li>
     {{ end }}
   </ul>
 </div>
+
   <header id="article-header">
     <h1>{{ .Title }}</h1>
-    
     <div class="container_info">
 🥷 By {{ .Params.author }} | 
  🕑 <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}" aria-label="Published on {{ .Date | time.Format ":date_long" }}">{{ .Date | time.Format ":date_long" }}</time>
     </div>
   </header>
   
+  {{ if and (gt .WordCount 400 ) (.Params.toc) }}
   <nav class="container-toc" role="navigation" aria-label="Table of Contents">
     <h2>Table of Contents</h2>
     {{ .TableOfContents }}
   </nav>
+  {{ end }}
   
   <section class="content-page" id="article-page">
     {{ .Content }}

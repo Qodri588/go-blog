@@ -1,9 +1,0 @@
-<div class="bread">
-  <ul>
-    {{ range .Ancestors.Reverse }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-      </li>
-    {{ end }}
-  </ul>
-</div>

@@ -1,0 +1,23 @@
+baseURL: "https://go-blogg.netlify.app"
+languageCode: "en-us"
+title: "My New Hugo Site"
+description: "Simple Web"
+params:
+  description : "Simpel web"
+  toc: true
+  copyright : "MIT"
+  logo : "/logo.png"
+  author: 
+    - name : "Qodri"
+    - email : "mqodri588@gmail.com"
+  social : 
+    - facebook: 
+       name : "mqodri1"
+       url: "https://fb.com/mqodri1"
+    - twitter:
+       name : "qodri58"
+       url : "https://x.com/qodri"
+    - pinterest :
+       name : "pinterest-name"
+       url : "https://pinterest.com/sudah"
+       

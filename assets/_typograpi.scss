@@ -18,6 +18,7 @@ body {
   font: normal 400 16px / 1.6 $base-font-family;
   color: $font-color;
   background-color: $bg-body;
+  text-rendering : optimizeLegibility;
 }
 h2,h3,h4{margin-bottom: 0.5em; margin-top:0.75em}
 h1 {
@@ -60,7 +61,7 @@ li{
 }
 
 a {
-  
+  color : $font-color;
   text-decoration: none;
   position: relative;
 }
@@ -72,34 +73,5 @@ a:hover {
 
 a:hover::before {
   background-color: #f00;
-}
-
-$samp-value: #f0f0f0;
-$time-value: #333;
-$code-value: #000;
-$variable-value: #008000;
-$background-value: #fff;
-$border-value: #ccc;
-$text-main-value: #333;
-
-
-
-pre > code {
-  padding: 10px;
-  display: block;
-  overflow-x: auto;
-}
-
-var {
-  color: $variable-value;
-  font-style: normal;
-  font-family: monospace;
-}
-
-kbd {
-  background: $background-value;
-  border: 1px solid $border-value;
-  border-radius: 20px;
-  color: $text-main-value;
-  padding: 2px 4px;
+  font-weight: 700;
 }

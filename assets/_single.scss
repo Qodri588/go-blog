@@ -16,6 +16,35 @@ main{
     border-radius: 15px;
   }
 }
+
+.bread{
+  padding-top: 1.5em;
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    display: flex;
+    gap: 0.5em;
+    li{
+      margin: 0;
+      padding: 0;
+      color: $grey-color;
+      &:not(:last-child)::after {
+  content: "/"
+  ;
+      }
+      a{
+        padding-left: 0;
+        padding-right: 0.7em;
+        padding-top: 0.3em;
+        padding-bottom: 0.5em;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 .content-page{
   a{
     font-weight: 500;
@@ -23,7 +52,40 @@ main{
   }
 }
 
+#article-header{
+  h1{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+}
 
+.container_info{
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0.5em 0;
+  text-transform: capitalize;
+}
+.container-toc{
+  text-transform: capitalize;
+  h2{
+    font-size: 14px;
+    padding: 0.15em 0;
+    margin-bottom: 0.1em;
+    margin-top:1em;
+  }
+    ul{
+    padding: 0;
+    margin: 0;
+    margin-left: 1.3em;
+    font-size: 13px;
+    font-weight: 400;
+    list-style: "› ";
+    text-transform: capitalize;
+    li{
+      margin-bottom: 0.25em;
+    }
+    }
+}
 
 #tags{
   display: flex;
@@ -43,61 +105,8 @@ main{
     }
   }
 }
-/*  */
-/* .container-info-page{ */
-/*   height: 1em; */
-/*   display: flex; */
-/*   justify-content: start; */
-/*   font-weight: 400; */
-/*   font-size: 14px; */
-/*   color: $theme; */
-/*   margin: 0.5em 0; */
-/* } */
 
 .divider{
   padding: 0 1em;
   color: grey;
 }
-/* container { */
-/*   display: flex; */
-/*   justify-content: start; */
-/*   align-items: center; */
-/*   position: static; */
-/*   top: 50%; */
-/*   left: 50%; */
-/*   height: 4em; */
-/*    */
-/* } */
-
-/* .detail-container { */
-/*   width: 40%; */
-/*   //padding-left: 1em; */
-/*   font-size: 12px;  */
-/*   border-right: 2px solid grey; */
-/*   margin-left: 1em; */
-/*   color: $theme; */
-/*   font-weight: 400; */
-/* } */
-  
-/*  */
-/*  */
-/* .container-toc{ */
-/*   margin-top: 1em; */
-/*   margin-bottom: 0; */
-/*   margin-right: 0; */
-/*   padding: 0.5em 0; */
-/*   font-size: 16px; */
-/*   font-weight:600; */
-/*   .icon-toc{ */
-/*    margin-right: 0.5em;  */
-/*   } */
-/*   ul{ */
-/*     padding: 0; */
-/*     margin: 0; */
-/*     margin-left: 1.3em; */
-/*     font-size: 13px; */
-/*     font-weight: 400; */
-/*     list-style: "›  "; */
-/*     text-transform: capitalize; */
-/*     } */
-/* } */
