@@ -18,12 +18,11 @@
     </div>
   </header>
   
-  {{ if and (gt .WordCount 400 ) (.Params.toc) }}
   <nav class="container-toc" role="navigation" aria-label="Table of Contents">
     <h2>Table of Contents</h2>
     {{ .TableOfContents }}
   </nav>
-  {{ end }}
+  
   
   <section class="content-page" id="article-page">
     {{ .Content }}
