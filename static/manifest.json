@@ -1,16 +1,31 @@
 {
-  "name": "Kreeptron",
-  "short_name": "kreeptron",
+  "background_color": "#ffffff",
+  "description": "Simpel web",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Home | My New Hugo Site",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Hugo PWA",
+  "start_url": "/",
+  "theme_color": "#ffffff",
   "icons": [
     {
+      "src": "https://go-blogg.netlify.app/"
+    },
+    {
       "src": "/favicon.ico",
-      "sizes": "16x16",
-      "type": "image/ico"
+      "type": "image/x-icon"
     }
   ],
-  "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF"
+  "lang": "id",
+  "display_override": [
+    "browser",
+    "window-controls-overlay",
+    "minimal-ui",
+    "standalone"
+  ],
+  "categories": [
+    "politics"
+  ]
 }
